@@ -30,15 +30,22 @@ a{
     width: 100%;
 }
 
-.specialties{
+#specialties{
     display: flex;
+    flex-wrap: wrap;
+}
+
+#menu{
+    display: flex;
+    flex-wrap: wrap;
 }
 
 .card{
     display: flex;
     flex-wrap: wrap;
+    width: 30%;
 }
 
-.card > figure{
-    width: 90%;
+button{
+    
 }
