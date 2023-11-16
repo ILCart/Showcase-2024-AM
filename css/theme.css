@@ -1,5 +1,26 @@
+body{
+    background-color: #1F3222;
+    color: #ffffff;
+}
+a{
+    color: #ffffff;
+}
+#navlist{
+    background-color: #C29B64;
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+    position: fixed;
+    width: 100%;
+    z-index: 1;
+}
 *{
     box-sizing: border-box;
     max-width: 100%;
+    margin: 0;
 }
 
+.card{
+    display: flex;
+    
+}
