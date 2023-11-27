@@ -35,11 +35,9 @@ body {
 a {
     color: #ffffff;
 }
-
+/* Style navba  */
 nav {
-    height: 5vh;
-    border-bottom: #EEB01F 4rem solid;
-    position: fixed;
+    border-bottom: #EEB01F .5rem solid;
     z-index: 5;
     width: 100%;
 }
@@ -68,16 +66,14 @@ nav {
 
 }
 
+/* Start home page */
+
 #specialties {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
 }
 
-#menu {
-    display: flex;
-    flex-wrap: wrap;
-}
 
 .card {
     display: flex;
@@ -89,4 +85,11 @@ nav {
     color: white;
     background-color: var(--main-accent);
     border: none;
+}
+
+/* Start Menu */
+
+#menu {
+    display: flex;
+    flex-wrap: wrap;
 }
