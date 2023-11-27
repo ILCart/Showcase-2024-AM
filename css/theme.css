@@ -57,7 +57,9 @@ nav {
 #navlist>li {
     width: 12rem;
 }
-
+#navlist li:nth-child(1) > a > img{
+    height: 5vh;
+}
 #navlist a {
     font-size: 2rem;
     text-align: center;
@@ -128,7 +130,10 @@ header{
     border: none;
 }
 
-
+/* Start Footer */
+footer{
+    background-color: var(--accent1);
+}
 
 /* Start Menu */
 
