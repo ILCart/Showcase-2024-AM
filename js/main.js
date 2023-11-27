@@ -1,7 +1,7 @@
 
 
 window.addEventListener('load', ()=>{
-    document.getElementsByClassName("card menu-card")[0].onclick = (e)=>{
+    document.querySelector(".card .menu-card")[0].onclick = (e)=>{
         console.log(e)
     }
 })
