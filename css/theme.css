@@ -45,29 +45,36 @@ nav {
 }
 
 #navlist {
+    background-image: url(../media/images/rockywall.png);
+    background-blend-mode: color-burn;
     background-color: var(--main-accent);
     list-style: none;
     display: flex;
     justify-content: space-around;
     align-items: center;
+    align-content: center;
     width: 100%;
-    height: 7vh;
+    height: 9vh;
 }
 
 #navlist>li {
+    
     width: 12rem;
+    height: 100%;
 }
 #navlist li:nth-child(1) > a > img{
-    height: 5vh;
+    height: 100%;
 }
 #navlist a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     font-size: 2rem;
     text-align: center;
-    display: block;
     height: 100%;
     width: 100%;
     text-decoration: none;
-
+    font-weight: 100;
 }
 
 /* Start home page */
@@ -75,7 +82,7 @@ nav {
 #specialties {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content: space-evenly;
 }
 /* Header */
 header{
@@ -114,14 +121,16 @@ header{
     flex-wrap: wrap;
     justify-content: center;
     align-content: center;
-    width: 32%;
+    width: 20%;
     background-color: var(--main-accent);
 }
 .card > figure{
     padding: 5%;
 }
 .card > figure > figcaption{
-    font-size: 2.5rem;
+    font-size: 3rem;
+    height: 15rem;
+    font-family: 'Zen Old Mincho', serif;
 }
 
 .button {
@@ -133,6 +142,8 @@ header{
 /* Start Footer */
 footer{
     background-color: var(--accent1);
+    background-image: url(../media/images/upfeathers.png),url(../media/images/rockywall.png);
+    background-blend-mode: color-burn;
 }
 
 /* Start Menu */
