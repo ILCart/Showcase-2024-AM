@@ -23,6 +23,8 @@ body {
     background-repeat: repeat;
     background-blend-mode: color-burn;
     font-family: 'Quicksand', sans-serif;
+    display: flex;
+    flex-flow: row wrap;
 }
 .decorative-font ,h2 {
     font-family: 'Zen Old Mincho', serif;
@@ -172,4 +174,15 @@ footer{
 
 #top-line {
     display: flex;
+}
+
+/* Start Contact */
+
+.contact-form-input {
+    background-color: #C4C896;
+    border-color: var(--main-accent);
+}
+
+#contact-us {
+    font-size: 64px;
 }
