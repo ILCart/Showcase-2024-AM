@@ -160,14 +160,51 @@ footer{
 
 #isaac {
     display: flex;
+    flex-flow: column wrap;
+    order: 0;
+    margin: 7%;
+    border-radius: 50%;
+    align-items: center;
+}
+
+#isaacpic {
+    border-radius: 50%;
+    border-color: #5B9676;
+    border-width: 5px;
+    border-style: solid;
+}
+
+#isaac-awards {
+    border: 7px;
+    background-color: #B2A695;
 }
 
 #ryan {
     display: flex;
+    flex-flow: column wrap;
+    order: 2;
+    margin: 7%;
+    border-radius: 50%;
+    align-items: center;
+}
+
+#ryanpic {
+    border-radius: 50%;
+    border-color: #5B9676;
+    border-width: 5px;
+    border-style: solid;
+}
+
+#ryan-awards {
+    border: 7px;
+    background-color: #B2A695;
+    margin-bottom: 28px;
+    list-style-type: none;
+    align-content: center;
 }
 
 #diagonal>line {
-    transform: rotate(10deg);
+    transform: rotate(19deg);
     justify-content: center;
 }
 
@@ -176,6 +213,7 @@ footer{
     height: 100%;
     display: flex;
     justify-content: center;
+    margin: 7%;
 }
 
 #bottom-line {
@@ -196,4 +234,14 @@ footer{
 
 #contact-us {
     font-size: 64px;
+}
+
+#contactus {
+    width: 48%;
+    height: 80%;
+    justify-content: flex-end;
+}
+
+#contact-form {
+    width: 25%;
 }
