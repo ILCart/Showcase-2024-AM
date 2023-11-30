@@ -270,6 +270,11 @@ footer{
 #contact-us {
     font-size: 64px;
     font-family: 'Zen Old Mincho', serif;
+}
+
+#contactus {
+    width: 48%;
+    height: 100vh;
     border-right: #C29B64;
     border-width: 7px;
     border-style: solid;
@@ -278,16 +283,14 @@ footer{
     border-bottom: 0px;
 }
 
-#contactus {
-    width: 48%;
-    height: 80%;
-}
-
 #contact-form {
     width: 25%;
+    
     
 }
 
 #left-column {
-    order: -1;
+    display: flex;
+    justify-content: center;
+    flex-flow: row wrap;
 }
