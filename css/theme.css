@@ -222,7 +222,7 @@ footer{
     display: flex;
     flex-flow: column wrap;
     order: 0;
-    margin: 7%;
+    margin: auto;
     border-radius: 50%;
     align-items: center;
     width: 20%;
@@ -251,7 +251,7 @@ footer{
     display: flex;
     flex-flow: column wrap;
     order: 2;
-    margin: 7%;
+    margin: auto;
     border-radius: 50%;
     align-items: center;
     width: 20%;
