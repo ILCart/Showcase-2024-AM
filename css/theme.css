@@ -357,8 +357,10 @@ footer{
 
 /* Start Cart */
 .cartcard{
-    
+    display: flex;
+    flex-flow: row wrap;
+    background-color: var(--main-accent);
 }
 .cartcard > figure{
-    
+    width: 15%;
 }
