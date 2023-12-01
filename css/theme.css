@@ -126,7 +126,7 @@ header{
     height: 100vh; 
     width: 100vw;
 }
-
+/* Style Cards */
 .card {
     display: flex;
     flex-wrap: wrap;
@@ -139,8 +139,11 @@ header{
     padding: 5%;
 }
 .card > figure > figcaption{
+    display: flex;
+    flex-flow: row wrap;
+    align-content: center;
     font-size: 4rem;
-    height: 4rem;
+    height: 10rem;
     font-family: 'Zen Old Mincho', serif;
 }
 
@@ -184,10 +187,10 @@ footer{
     background-color: var(--main-accent);
     justify-content: space-between;
     align-items: flex-start;
-    top: 20vh;
     width: 60vw;
+    position: absolute;
 }
-.exit-button{
+.exit-overlay{
     width: 2.5%;
     aspect-ratio: 1/1;
 }
@@ -210,8 +213,9 @@ footer{
     width: 75%;
 }
 .menu-card{
-    margin-bottom: 10%;
+    margin-bottom: 2%;
 }
+
 /* Start About Us */
 
 #isaac {
