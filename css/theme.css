@@ -333,16 +333,15 @@ footer{
 }
 
 #contactus {
-    margin-left: 3%;
-    margin-top: 3%;
-    width: 43%;
+    padding: 3%;
+    width: 50%;
     height: 100vh;
-    border-right: #C29B64;
-    border-width: 7px;
-    border-style: solid;
-    border-left: 0px;
-    border-top: 0px;
-    border-bottom: 0px;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-content: center;
+    align-items: center;
+    border-right: var(--accent1) 7px solid;
 }
 
 #contact-form {
@@ -355,7 +354,8 @@ footer{
     display: flex;
     text-align: center;
     flex-flow: column wrap;
-    margin: 3%;
+    width: 50%;
+    padding: 3%;
 }
 
 #cinfo {
@@ -366,11 +366,19 @@ footer{
 }
 
 /* Start Cart */
+#cart-list{
+    display: flex;
+    flex-flow: row wrap;
+}
 .cartcard{
     display: flex;
     flex-flow: row wrap;
+    align-items: flex-start;
     background-color: var(--main-accent);
 }
 .cartcard > figure{
     width: 15%;
+}
+.cart-content{
+
 }
