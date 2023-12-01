@@ -363,6 +363,23 @@ footer{
     border-color: #9E1D21;
     border-width: 3px;
     font-size: 38px;
+    width: 70%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#thankyou>h2 {
+    font-size: 48px;
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#thankyou>p {
+    width: 33%;
+    align-self: center;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 /* Start Cart */
