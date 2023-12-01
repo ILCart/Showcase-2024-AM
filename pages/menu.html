@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -11,7 +12,8 @@
 <body>
     <nav>
         <ul id="navlist">
-            <li><a href="../index.html"><img src="../media/images/prehistoric-pours-logo.jpg" alt="prehistoric pours logo"></a></li>
+            <li><a href="../index.html"><img src="../media/images/prehistoric-pours-logo.jpg"
+                        alt="prehistoric pours logo"></a></li>
             <li><a href="../index.html">Home</a></li>
             <li><a href="menu.html">Menu</a></li>
             <li><a href="contact.html">Contact Us</a></li>
@@ -20,7 +22,14 @@
 
         </ul>
     </nav>
-    <main>
+    <main id="menu-parent">
+        <aside id="menu-filter">
+            <ul>
+                <li><button>Coffee</button></li>
+                <li><button>Pastries</button></li>
+                <li><button>Food</button></li>
+            </ul>
+        </aside>
         <ul id="menu">
             <li class="card menu-card">
                 <figure>
@@ -101,7 +110,7 @@
                 </figure>
             </li>
             <li class="card menu-card">
-                <figure>    
+                <figure>
                     <img src="../media/images/bec.jpg" alt="">
                     <figcaption>Alan Grant’s BEC</figcaption>
                 </figure>
@@ -113,6 +122,7 @@
                 </figure>
             </li>
         </ul>
+
     </main>
     <footer>
         <h2>
@@ -121,20 +131,17 @@
         <p>Brewed from the oldest beans</p>
         <p id="footercopyright">© 2023 Prehistoric Pours. All rights reserved.</p>
     </footer>
-    <aside id="menu-filter">
-        <ul>
-            <li><button>Coffee</button></li>
-            <li><button>Pastries</button></li>
-            <li><button>Food</button></li>
-        </ul>
-    </aside>
+
     <section id="overlay-menu">
-        <button id="overlay-x-menu">x</button>
+        <button class="exit-overlay">x</button>
         <figure><img src="../media/images/coffee.jpg" alt="espresso, cup, mug"></figure>
-        <h2>Espresso</h2>
-        <p>Our signiature espresso is smooth, rich, and sweet, it is the heart of everything we do.</p>
-        <button class="add-cart">Add to cart</button>
+        <section id="card-description">
+            <h2>Espresso</h2>
+            <p>Our signiature espresso is smooth, rich, and sweet, it is the heart of everything we do.</p>
+            <button class="add-cart">Add to cart</button>
+        </section>
     </section>
-    
+
 </body>
+
 </html>
