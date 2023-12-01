@@ -35,13 +35,17 @@ h2{
 a {
     color: #ffffff;
 }
-
+button{
+    border: 0;
+}
 .abutton{
+    font-weight: 100;
     background-color: var(--main-accent);
     text-decoration: none;
     font-size: 4rem;
     text-align: center;
     align-content: center;
+    border-radius: 5px;
 }
 #home-cta{
     width: 60%;
@@ -169,7 +173,7 @@ footer{
 
 /* Start Menu */
 #menu-parent{
-    width: 90vw;
+    width: 100vw;
 }
 #menu {
     display: flex;
@@ -179,7 +183,8 @@ footer{
 
 #menu-filter{
     order: -1;
-    width: 9vw;
+    width: 100vw;
+    background-color: var(--main-accent);
 }
 #overlay-menu{
     display: flex;
@@ -188,7 +193,6 @@ footer{
     justify-content: space-between;
     align-items: flex-start;
     width: 60vw;
-    position: absolute;
 }
 .exit-overlay{
     width: 2.5%;
@@ -392,10 +396,17 @@ footer{
     flex-flow: row wrap;
     align-items: flex-start;
     background-color: var(--main-accent);
+    padding: 1%;
 }
 .cartcard > figure{
     width: 15%;
 }
 .cart-content{
 
+}
+
+/* Start General Tag */
+.rocky-texture{
+    background-image: url(../media/images/rockywall.png);
+    background-blend-mode: color-burn;
 }
