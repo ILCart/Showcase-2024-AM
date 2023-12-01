@@ -222,10 +222,8 @@ footer{
     display: flex;
     flex-flow: column wrap;
     order: 0;
-    margin: auto;
     border-radius: 50%;
     align-items: center;
-    width: 20%;
 }
 
 #isaacpic {
@@ -238,7 +236,6 @@ footer{
 #isaac-awards {
     border: 7px;
     background-color: #B2A695;
-    margin-bottom: 28px;
     list-style-type: none;
     align-content: center;
     border-color: #5B9676;
@@ -250,11 +247,8 @@ footer{
 #ryan {
     display: flex;
     flex-flow: column wrap;
-    order: 2;
-    margin: auto;
     border-radius: 50%;
     align-items: center;
-    width: 20%;
 }
 
 #ryanpic {
@@ -267,7 +261,6 @@ footer{
 #ryan-awards {
     border: 7px;
     background-color: #B2A695;
-    margin-bottom: 28px;
     list-style-type: none;
     align-content: center;
     border-color: #5B9676;
@@ -276,6 +269,13 @@ footer{
     max-width: 200px;
 }
 
+#contactwe {
+    width: 100vw;
+    display: flex;
+    flex-flow: row nowrap;
+    padding: 7px;
+}
+/* 
 #diagonal>line {
     transform: rotate(19deg);
     justify-content: center;
@@ -286,7 +286,7 @@ footer{
     height: 100%;
     display: flex;
     justify-content: center;
-    margin: 7%;
+    padding: 7%;
 }
 
 #bottom-line {
@@ -306,8 +306,7 @@ footer{
 .timeline>svg {
     position: absolute;
 }
-
-
+ */
 /* Start Contact */
 
 .contact-form-input {
@@ -341,7 +340,7 @@ footer{
     flex-direction: column;
     align-content: center;
     align-items: center;
-    border-right: var(--accent1) 7px solid;
+    border-right: #C29B64 7px solid;
 }
 
 #contact-form {
