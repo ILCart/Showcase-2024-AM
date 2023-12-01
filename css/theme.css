@@ -273,7 +273,9 @@ footer{
 }
 
 #contactus {
-    width: 48%;
+    margin-left: 3%;
+    margin-top: 3%;
+    width: 43%;
     height: 100vh;
     border-right: #C29B64;
     border-width: 7px;
@@ -291,6 +293,14 @@ footer{
 
 #left-column {
     display: flex;
-    justify-content: center;
-    flex-flow: row wrap;
+    text-align: center;
+    flex-flow: column wrap;
+    margin: 3%;
+}
+
+#cinfo {
+    border-style: solid;
+    border-color: #9E1D21;
+    border-width: 3px;
+    font-size: 38px;
 }
