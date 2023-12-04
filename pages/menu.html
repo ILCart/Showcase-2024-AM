@@ -18,8 +18,7 @@
             <li><a href="menu.html">Menu</a></li>
             <li><a href="contact.html">Contact Us</a></li>
             <li><a href="about.html">About Us</a></li>
-            <li><a href="cart.html"><img src="../media/icons/cart.svg" alt="flat cart icon"></a></li>
-
+            <li><a href="cart.html" id="carticon"><img src="../media/icons/cart.svg" alt="flat cart icon"> <span id="cartItemCount">0</span></span></a></li>
         </ul>
     </nav>
     <main id="menu-parent">
@@ -33,93 +32,123 @@
         <ul id="menu">
             <li class="card menu-card">
                 <figure class="rocky-texture">
-                    <img src="../media/images/coffee.jpg" alt="">
-                    <figcaption>Espresso</figcaption>
+                    <img class="menu-card-image" src="../media/images/coffee.jpg" alt="">
+                    <figcaption class="menu-card-name">Espresso</figcaption>
                 </figure>
+                <p class="menu-card-desc">Our signature espresso is smooth, rich, and sweet. It is the heart of everything we do.</p>
+                <p class="menu-card-price">4.99</p>
             </li>
             <li class="card menu-card">
                 <figure class="rocky-texture">
-                    <img src="../media/images/latte.jpg" alt="">
-                    <figcaption>Latte</figcaption>
+                    <img class="menu-card-image" src="../media/images/latte.jpg" alt="">
+                    <figcaption class="menu-card-name">Latte</figcaption>
                 </figure>
+                <p class="menu-card-desc">Our dark, rich espresso balanced with steamed milk and a light layer of foam. A perfect milk-forward warm-up</p>
+                <p class="menu-card-price">3.99</p>                
             </li>
             <li class="card menu-card">
                 <figure class="rocky-texture">
-                    <img src="../media/images/caffeine-chaos.jpg" alt="">
-                    <figcaption>Caffeine Chaos</figcaption>
+                    <img class="menu-card-image" src="../media/images/caffeine-chaos.jpg" alt="">
+                    <figcaption class="menu-card-name">Caffeine Chaos</figcaption>
                 </figure>
+                <p class="menu-card-desc">A special blend of our espresso, roll the dice and decide your fate.</p>
+                <p class="menu-card-price">7.77</p>                
             </li>
             <li class="card menu-card">
                 <figure class="rocky-texture">
-                    <img src="../media/images/americano.jpg" alt="">
-                    <figcaption>Americano</figcaption>
+                    <img class="menu-card-image" src="../media/images/americano.jpg" alt="">
+                    <figcaption class="menu-card-name">Americano</figcaption>
                 </figure>
+                <p class="menu-card-desc">A dark, rich espresso with steamed milk and a light layer of foam.</p>
+                <p class="menu-card-price">4.99</p>                
             </li>
             <li class="card menu-card">
                 <figure class="rocky-texture">
-                    <img src="../media/images/hot-chocolate.jpg" alt="">
-                    <figcaption>Hot Chocolate</figcaption>
+                    <img class="menu-card-image" src="../media/images/hot-chocolate.jpg" alt="">
+                    <figcaption class="menu-card-name">Hot Chocolate</figcaption>
                 </figure>
+                <p class="menu-card-desc">Steamed milk with chocolate-flavored syrups. A timeless classic made to sweeten your spirits.</p>
+                <p class="menu-card-price">4.99</p>                
             </li>
             <li class="card menu-card">
                 <figure class="rocky-texture">
-                    <img src="../media/images/cheesecake.jpg" alt="">
-                    <figcaption>Cheese Cake</figcaption>
+                    <img class="menu-card-image" src="../media/images/cheesecake.jpg" alt="">
+                    <figcaption class="menu-card-name">Cheese Cake</figcaption>
                 </figure>
+                <p class="menu-card-desc">Creamy, sweet, and slightly tangy, cheesecake offers a delightful blend of flavors and textures.</p>
+                <p class="menu-card-price">7.99</p>                
             </li>
             <li class="card menu-card">
                 <figure class="rocky-texture">
-                    <img src="../media/images/croissant.jpg" alt="">
-                    <figcaption>Croissant</figcaption>
+                    <img class="menu-card-image" src="../media/images/croissant.jpg" alt="">
+                    <figcaption class="menu-card-name">Croissant</figcaption>
                 </figure>
+                <p class="menu-card-desc">A classic croissant, severed buttered and warmed.</p>
+                <p class="menu-card-price">3.99</p>                
             </li>
             <li class="card menu-card">
                 <figure class="rocky-texture">
-                    <img src="../media/images/dino-dig.jpg" alt="">
-                    <figcaption>Dino Dig</figcaption>
+                    <img class="menu-card-image" src="../media/images/dino-dig.jpg" alt="">
+                    <figcaption class="menu-card-name">Dino Dig</figcaption>
                 </figure>
+                <p class="menu-card-desc">Become an archeologist and dig up some white chocolate dinosaur fossils! A light and fluffy mug cake with an adventurous twist!</p>
+                <p class="menu-card-price">6.99</p>                
             </li>
             <li class="card menu-card">
                 <figure class="rocky-texture">
-                    <img src="../media/images/grass-muffin.jpg" alt="">
-                    <figcaption>Grass Muffin</figcaption>
+                    <img class="menu-card-image" src="../media/images/grass-muffin.jpg" alt="">
+                    <figcaption class="menu-card-name">Grass Muffin</figcaption>
                 </figure>
+                <p class="menu-card-desc">Minty smooth textured muffin, served with blades of grass.</p>
+                <p class="menu-card-price">3.99</p>                
             </li>
             <li class="card menu-card">
                 <figure class="rocky-texture">
-                    <img src="../media/images/classic-cookie.jpg" alt="">
-                    <figcaption>Classic Cookie</figcaption>
+                    <img class="menu-card-image" src="../media/images/classic-cookie.jpg" alt="">
+                    <figcaption class="menu-card-name">Classic Cookie</figcaption>
                 </figure>
+                <p class="menu-card-desc">A baked cookie with chocolate chips, served with a 12 oz. glass of milk. A classic!</p>
+                <p class="menu-card-price">2.99</p>                
             </li>
             <li class="card menu-card">
                 <figure class="rocky-texture">
-                    <img src="../media/images/clever-girl.jpg" alt="">
-                    <figcaption>Clever Girl</figcaption>
+                    <img class="menu-card-image" src="../media/images/clever-girl.jpg" alt="">
+                    <figcaption class="menu-card-name">Clever Girl</figcaption>
                 </figure>
+                <p class="menu-card-desc">Seared chicken, served with light pesto sauce and basil.</p>
+                <p class="menu-card-price">11.99</p>                
             </li>
             <li class="card menu-card">
                 <figure class="rocky-texture">
-                    <img src="../media/images/RTS.jpg" alt="">
-                    <figcaption>Ryan’s T.S.</figcaption>
+                    <img class="menu-card-image" src="../media/images/RTS.jpg" alt="">
+                    <figcaption class="menu-card-name">Ryan’s T.S.</figcaption>
                 </figure>
+                <p class="menu-card-desc">Smoked chicken with a special chipotle sauce, served with peppers and guacamole.</p>
+                <p class="menu-card-price">13.99</p>                
             </li>
             <li class="card menu-card">
                 <figure class="rocky-texture">
-                    <img src="../media/images/isla-nublar-special.jpg" alt="">
-                    <figcaption>Isla Nublar Specialty</figcaption>
+                    <img class="menu-card-image" src="../media/images/isla-nublar-special.jpg" alt="">
+                    <figcaption class="menu-card-name">Isla Nublar Special</figcaption>
                 </figure>
+                <p class="menu-card-desc">A delicious Costa Rican breakfast. Gallo pinto rice with a runny fried egg paired with caramelized pillowy plantains. Hearty and full of nutrients!</p>
+                <p class="menu-card-price">13.99</p>                
             </li>
             <li class="card menu-card">
                 <figure class="rocky-texture">
-                    <img src="../media/images/bec.jpg" alt="">
-                    <figcaption>Alan Grant’s BEC</figcaption>
+                    <img class="menu-card-image" src="../media/images/bec.jpg" alt="">
+                    <figcaption class="menu-card-name">Alan Grant’s BEC</figcaption>
                 </figure>
+                <p class="menu-card-desc">NYC styles Bacon Egg and Cheese breakfast sandwich.</p>
+                <p class="menu-card-price">7.99</p>                
             </li>
             <li class="card menu-card">
                 <figure class="rocky-texture">
-                    <img src="../media/images/chicken-cheese-melt.jpg" alt="">
-                    <figcaption>Chicken Cheese Melt</figcaption>
+                    <img class="menu-card-image" src="../media/images/chicken-cheese-melt.jpg" alt="">
+                    <figcaption class="menu-card-name">Chicken Cheese Melt</figcaption>
                 </figure>
+                <p class="menu-card-desc">A chicken cheese sandwich, served with a cup of sliced pickles, and a cup of whole pickles.</p>
+                <p class="menu-card-price">7.99</p>                
             </li>
         </ul>
 
@@ -132,7 +161,7 @@
         <p id="footercopyright">© 2023 Prehistoric Pours. All rights reserved.</p>
     </footer>
 
-    <section id="overlay-container">
+    <section id="overlay-container" class="overlay-invisible">
         <section id="overlay-product">
 
             <figure id="product-fig"><img id="product-image" src="../media/images/coffee.jpg" alt="espresso, cup, mug">
@@ -141,9 +170,9 @@
                 <h2 id="product-name">Espresso</h2>
                 <p id="product-descriptor">Our signiature espresso is smooth, rich, and sweet, it is the heart of
                     everything we do.</p>
-                <a class="btn atc-btn">Add to cart</a>
+                <a href="" class="btn atc-btn addToCart">Add to cart</a>
             </section>
-            <a class="exit-overlay btn"> <img src="../media/icons/exit.svg" alt=""> </a>
+            <a class="exit-overlay btn" href=""> <img src="../media/icons/exit.svg" alt=""> </a>
         </section>
     </section>
 
