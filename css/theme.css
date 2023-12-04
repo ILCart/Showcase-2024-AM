@@ -435,16 +435,19 @@ footer{
     position: absolute;
 }
  */
- .container {
+.container {
     text-align: center;
+    display: flex;
 }
 
 .progress-container {
     display: flex;
+    flex-flow: column wrap;
     justify-content: space-between;
     width: 100%;
     margin-bottom: 30px;
     position: relative;
+    padding: 1%;
 }
 
 .progress {
@@ -466,6 +469,7 @@ footer{
     display: flex;
     align-items: center;
     justify-content: center;
+    flex-flow: row wrap;
     border: 3px solid var(--grey);
 }
 
