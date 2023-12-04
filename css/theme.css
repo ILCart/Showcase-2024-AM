@@ -251,6 +251,13 @@ footer{
     content: "$";
 }
 
+@media only screen and (max-width: 640px) {
+    .menu-card{
+        width: 100%;
+        padding: 2%;
+    }
+}
+
 /* Start overlay */
 .overlay-visible{
     opacity: 1;
