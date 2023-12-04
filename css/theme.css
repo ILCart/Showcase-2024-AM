@@ -414,6 +414,7 @@ footer{
     display: flex;
     flex-flow: row nowrap;
     padding: 7px;
+    justify-content: space-around;
 }
 /* 
 #diagonal>line {
@@ -447,16 +448,20 @@ footer{
     position: absolute;
 }
  */
- .container {
+.container {
     text-align: center;
+    display: flex;
 }
 
 .progress-container {
     display: flex;
+    flex-flow: column wrap;
     justify-content: space-between;
     width: 100%;
     margin-bottom: 30px;
     position: relative;
+    padding: 1%;
+    min-height: 50vh;
 }
 
 .progress {
@@ -478,6 +483,7 @@ footer{
     display: flex;
     align-items: center;
     justify-content: center;
+    flex-flow: row wrap;
     border: 3px solid var(--grey);
 }
 
