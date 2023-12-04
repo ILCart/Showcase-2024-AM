@@ -26,6 +26,7 @@ body {
     display: flex;
     flex-flow: row wrap;
 }
+/* Font for main logo and stylized headings */
 .decorative-font ,h2 {
     font-family: 'Zen Old Mincho', serif;
 }
@@ -35,16 +36,17 @@ h2{
 a {
     color: #ffffff;
 }
-button{
-    border: 0;
-}
-.abutton{
+
+/* create a default button stlye */
+.btn{
+    display: flex;
+    flex-flow: row wrap;
     font-weight: 100;
     background-color: var(--main-accent);
     text-decoration: none;
     font-size: 4rem;
-    text-align: center;
-    align-content: center;
+    justify-content: center;
+    align-items: center;
     border-radius: 5px;
 }
 #home-cta{
@@ -53,7 +55,7 @@ button{
 }
 /* Style navbar  */
 nav {
-    border-bottom: #EEB01F .5rem solid;
+    border-bottom: var(--accent1) .5rem solid;
     z-index: 5;
     width: 100%;
     order: -2;
@@ -99,6 +101,12 @@ nav {
     flex-wrap: wrap;
     justify-content: space-between;
 }
+.special{
+    padding: 1%;
+    width: 33%;
+    align-content: center;
+
+}
 /* Header */
 header{
     display: flex;
@@ -131,28 +139,33 @@ header{
     width: 100vw;
 }
 /* Style Cards */
+figure > img{
+    border-radius: 5px;
+}
 .card {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     align-content: center;
-    width: 32%;
-    background-color: var(--main-accent);
 }
 .card > figure{
+    background-color: var(--main-accent);
+    border-radius: 5px;
     padding: 5%;
 }
 .card > figure > figcaption{
     display: flex;
     flex-flow: row wrap;
-    align-content: center;
+    justify-content: center;
+    text-align: center;
     font-size: 4rem;
-    height: 10rem;
     font-family: 'Zen Old Mincho', serif;
 }
 
 .card > figure > img{
     aspect-ratio: 1/1;
+    width: 100%;
+    max-height: 100%;
     object-fit: cover;
 }
 
@@ -185,40 +198,97 @@ footer{
     order: -1;
     width: 100vw;
     background-color: var(--main-accent);
-}
-#overlay-menu{
+    height: 5vh;
     display: flex;
-    flex-wrap: wrap;
-    background-color: var(--main-accent);
+    flex-flow: wrap row;
+    align-items: center;
+}
+#filters{
+    width: 100%;
+    display: flex;
+    flex-flow: wrap row;
+    justify-content: space-around;
+    list-style: none;
+    font-size: 2.5rem;
+}
+.menu-card{
+    width: 20%;
+    padding: .5%;
+}
+.menu-card > figure > figcaption{
+    font-size: 2.2rem;
+
+}
+
+/* Start overlay */
+
+#overlay-container{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-content: center;
+    background-color: rgba(0, 0, 0,0.75);
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    z-index: 6;
+    transition: .6s ease-in;
+    display: none;
+}
+#overlay-product{
+    display: flex;
+    flex-wrap: nowrap;
     justify-content: space-between;
-    align-items: flex-start;
-    width: 60vw;
+    align-items: center;
+    background-color: var(--main-accent);
+    width: 80%;
+    padding: 2%;
 }
-.exit-overlay{
-    width: 2.5%;
-    aspect-ratio: 1/1;
-}
-#overlay-menu > figure{
-    width: 25%;
-}
+/* Style overlay main content */
+
 #card-description{
+    height: 100%;
     display: flex;
     flex-flow: wrap column;
     align-items: flex-start;
-    height: 100%;
 }
-#card-description > h2{
+
+/* add to cart button */
+.atc-btn{
+    font-size: 2rem;
+    font-weight: bold;
+    background-color: #5B9676;
+    padding: 2%;
+    margin-top: auto;
+    align-self: stretch;
+}
+#product-fig{
+    width: 40%;
+    padding-right: 2%;
+    object-fit: fill;
+}
+
+#product-name{
+    align-self: flex-start;
     font-size: 3.5rem;
     width: 70%;
 }
-#card-description > p{
+#product-descriptor{
+    padding: 2% 0;
     font-size: 1.5rem;
     text-wrap: wrap;
     width: 75%;
 }
-.menu-card{
-    margin-bottom: 2%;
+
+/* Exit Overlay Button */
+.exit-overlay{
+    align-self: flex-start;
+    width: 4%;
 }
+.exit-overlay > img{
+    width: 100%;
+}
+
 
 /* Start About Us */
 
