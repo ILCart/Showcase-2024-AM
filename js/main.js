@@ -203,7 +203,6 @@ function openItemOverlay(card){
     // Adapt faux cart add to overlay system
     cartButton.onclick = e => {
         addToCart(e,card)
-        exitOverlay(overlay)
     }
     //cartButton.forEach(button => button.addEventListener('click', addToCart))
     
