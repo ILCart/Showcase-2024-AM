@@ -419,6 +419,40 @@ footer{
     position: absolute;
 }
  */
+ .container {
+    text-align: center;
+}
+
+.progress-container {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin-bottom: 30px;
+    position: relative;
+}
+
+.progress {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    height: 4px;
+    width: 10%;
+    z-index: -1;
+    transform: translateY(-50%);
+}
+
+.circle {
+    background-color: #C29B64;
+    color: #9E1D21;
+    height: 30px;
+    width: 30px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 3px solid var(--grey);
+}
+
 /* Start Contact */
 
 .contact-form-input {
