@@ -432,6 +432,15 @@ footer{
     font-family: 'Zen Old Mincho', serif;
 }
 
+#submit-button {
+    background-color: #C4C896;
+    height: 3rem;
+    width: 7rem;
+    border: #C29B64 2px solid;
+    align-self: flex-end;
+    text-align: center;
+}
+
 #contactus {
     padding: 3%;
     width: 50%;
