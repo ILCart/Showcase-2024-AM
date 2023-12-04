@@ -280,7 +280,6 @@ footer{
     width: 100vw;
     height: 100vh;
     z-index: 6;
-    transition: .6s ease-in;
 }
 #overlay-product{
     display: flex;
@@ -309,6 +308,12 @@ footer{
     padding: 2%;
     margin-top: auto;
     align-self: stretch;
+    transition: background-color 200ms ease-in;
+}
+
+.atc-btn:hover{
+    background-color: #436f57;
+    transition: background-color 200ms ease-in;
 }
 #product-fig{
     width: 40%;
@@ -338,6 +343,13 @@ footer{
     align-self: flex-start;
     width: 4%;
     background-color: transparent;
+    transition: filter 200ms ease-in;
+
+}
+.exit-overlay:hover{
+    transition: filter 200ms ease-in;
+
+    filter: brightness(.25);
 }
 .exit-overlay > img{
     width: 100%;
