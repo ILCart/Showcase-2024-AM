@@ -402,6 +402,7 @@ footer{
     display: flex;
     flex-flow: row nowrap;
     padding: 7px;
+    justify-content: space-around;
 }
 /* 
 #diagonal>line {
@@ -448,6 +449,7 @@ footer{
     margin-bottom: 30px;
     position: relative;
     padding: 1%;
+    min-height: 50vh;
 }
 
 .progress {
