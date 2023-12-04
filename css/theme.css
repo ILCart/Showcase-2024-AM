@@ -67,7 +67,7 @@ nav {
     background-color: var(--main-accent);
     list-style: none;
     display: flex;
-    justify-content: space-around;
+    justify-content: flex-end;
     align-items: center;
     align-content: center;
     width: 100%;
@@ -75,11 +75,19 @@ nav {
 }
 
 #navlist>li {
-    
+    transition: all ease-in 200ms;
     width: 12rem;
     height: 100%;
 }
 
+#navlist>li:hover {
+    background-color: #91734a;
+    transition: all ease-in 200ms;
+}
+#navlist li:nth-child(1){
+    margin-right: auto;
+    width: 12%;
+}
 #navlist li:nth-child(1) > a > img{
     height: 100%;
     border-radius: 100%;
@@ -322,6 +330,7 @@ footer{
 .exit-overlay{
     align-self: flex-start;
     width: 4%;
+    background-color: transparent;
 }
 .exit-overlay > img{
     width: 100%;
