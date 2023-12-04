@@ -79,6 +79,7 @@ nav {
     width: 12rem;
     height: 100%;
 }
+
 #navlist li:nth-child(1) > a > img{
     height: 100%;
     border-radius: 100%;
