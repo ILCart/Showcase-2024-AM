@@ -430,13 +430,6 @@ footer{
     
 }
 
-#contactwe {
-    width: 100vw;
-    display: flex;
-    flex-flow: row nowrap;
-    padding: 7px;
-    justify-content: space-around;
-}
 /* 
 #diagonal>line {
     transform: rotate(19deg);
@@ -518,6 +511,24 @@ footer{
 
 
 /* Start Contact */
+
+@media only screen and (max-width:640px){
+    #contactwe {
+        width: 100vw;
+        display: flex;
+        flex-flow: row wrap;
+        padding: 7px;
+        justify-content: space-around;
+    }
+}
+
+#contactwe {
+    width: 100vw;
+    display: flex;
+    flex-flow: row nowrap;
+    padding: 7px;
+    justify-content: space-around;
+}
 
 .contact-form-input {
     background-color: #C4C896;
