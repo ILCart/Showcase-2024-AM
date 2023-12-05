@@ -152,6 +152,9 @@ header{
     height: 100vh; 
     width: 100vw;
 }
+#header-video > video{
+    width: 100vw;
+}
 /* Style Cards */
 figure > img{
     border-radius: 5px;
