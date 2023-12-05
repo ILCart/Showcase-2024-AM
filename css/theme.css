@@ -370,6 +370,15 @@ footer{
     border-width: 5px;
     border-style: solid;
     max-width: 200px;
+    font-size: large;
+}
+
+#isaac-awards>li {
+    padding: 7px;
+}
+
+#isaac-awards>h2 {
+    align-self: center;
 }
 
 #ryan {
@@ -395,6 +404,15 @@ footer{
     border-width: 5px;
     border-style: solid;
     max-width: 200px;
+    font-size: large;
+}
+
+#ryan-awards>li {
+    padding: 7px;
+}
+
+#ryan-awards>h2 {
+    
 }
 
 #contactwe {
@@ -436,6 +454,28 @@ footer{
     position: absolute;
 }
  */
+
+.timeline {
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    width: auto;
+    justify-content: center;
+    height: 75vh;
+    justify-content: space-around;
+}
+
+.time-line {
+    display: flex;
+    flex-flow: row wrap;
+    align-content: center;
+    text-align: center;
+}
+
+.year {
+    text-align: center;
+}
+
 .container {
     text-align: center;
     display: flex;
@@ -445,35 +485,22 @@ footer{
     display: flex;
     flex-flow: column wrap;
     justify-content: space-between;
-    width: 100%;
-    margin-bottom: 30px;
-    position: relative;
     padding: 1%;
     min-height: 50vh;
-}
-
-.progress {
-    position: absolute;
-    top: 50%;
-    left: 0;
-    height: 4px;
-    width: 10%;
-    z-index: -1;
-    transform: translateY(-50%);
 }
 
 .circle {
     background-color: #C29B64;
     color: #9E1D21;
-    height: 30px;
-    width: 30px;
-    border-radius: 50%;
+    height: 45px;
+    width: 45px;
+    border-radius: 75%;
     display: flex;
     align-items: center;
     justify-content: center;
-    flex-flow: row wrap;
     border: 3px solid var(--grey);
 }
+
 
 /* Start Contact */
 
