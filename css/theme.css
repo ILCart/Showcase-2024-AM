@@ -130,17 +130,20 @@ header{
 }
 /* Banner overlay */
 #header-banner{
-    height: 100%;
+    height: 100vh;
     align-content: center;
     justify-content: center;
     position: absolute;
-    width: 50%;
+    width: 50vw;
     display: flex;
     flex-wrap: wrap;
     flex-direction: column;
     backdrop-filter: blur(50px);
     background-color: rgba(0, 0, 0,0.25);
 }
+
+
+
 #ppourslogo {
     height: min-content;
     font-size: 8rem;
@@ -150,7 +153,10 @@ header{
 #header-video{
     overflow: hidden; /* Crop video */
     height: 100vh; 
-    width: 100vw;
+}
+
+#header-video > video{
+    max-width: none;
 }
 /* Style Cards */
 figure > img{
@@ -161,6 +167,8 @@ figure > img{
     flex-wrap: wrap;
     justify-content: center;
     align-content: center;
+    transition: all ease-in 200ms;
+
 }
 .card > figure{
     background-color: var(--main-accent);
@@ -251,12 +259,7 @@ footer{
     content: "$";
 }
 
-@media only screen and (max-width: 640px) {
-    .menu-card{
-        width: 100%;
-        padding: 2%;
-    }
-}
+
 
 /* Start overlay */
 .overlay-visible{
@@ -280,7 +283,6 @@ footer{
     width: 100vw;
     height: 100vh;
     z-index: 6;
-    transition: .6s ease-in;
 }
 #overlay-product{
     display: flex;
@@ -309,6 +311,12 @@ footer{
     padding: 2%;
     margin-top: auto;
     align-self: stretch;
+    transition: background-color 200ms ease-in;
+}
+
+.atc-btn:hover{
+    background-color: #436f57;
+    transition: background-color 200ms ease-in;
 }
 #product-fig{
     width: 40%;
@@ -338,6 +346,13 @@ footer{
     align-self: flex-start;
     width: 4%;
     background-color: transparent;
+    transition: filter 200ms ease-in;
+
+}
+.exit-overlay:hover{
+    transition: filter 200ms ease-in;
+
+    filter: brightness(.25);
 }
 .exit-overlay > img{
     width: 100%;
@@ -607,4 +622,25 @@ footer{
 .rocky-texture{
     background-image: url(../media/images/rockywall.png);
     background-blend-mode: color-burn;
+}
+
+/* Mobile styles */
+@media only screen and (max-width: 640px) {
+    .menu-card{
+        width: 100%;
+        padding: 2%;
+    }
+    :root{
+        font-size: 10px;
+    }
+    #header-video > video{
+        height: 100vh;
+        width: auto;
+    }
+    #header-banner{
+        bottom: 0;
+        height: 50vh;
+        width: 100vw;    
+    }
+    
 }
