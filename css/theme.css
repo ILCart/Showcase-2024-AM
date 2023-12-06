@@ -76,8 +76,8 @@ nav {
 
 #navlist>li {
     transition: all ease-in 200ms;
-    width: 12rem;
     height: 100%;
+    padding: 0 2%;
 }
 
 #navlist>li:hover {
@@ -85,13 +85,17 @@ nav {
     transition: all ease-in 200ms;
 }
 #navlist li:nth-child(1){
+    padding: 0;
     margin-right: auto;
-    width: 12%;
+    width: unset;
 }
 #navlist li:nth-child(1) > a > img{
     height: 100%;
     border-radius: 100%;
     padding: 3%;
+}
+#navlist li:nth-child(1) > a > span{
+    width: 50%;
 }
 #navlist a {
     display: flex;
@@ -127,10 +131,12 @@ header{
     flex-wrap: wrap;
     justify-content: right;
     align-items: center;
+    height: 91vh;
+    width: 100vw;
 }
 /* Banner overlay */
 #header-banner{
-    height: 100vh;
+    height: 91vh;
     align-content: center;
     justify-content: center;
     position: absolute;
@@ -152,11 +158,14 @@ header{
 /* Video */
 #header-video{
     overflow: hidden; /* Crop video */
-    height: 100vh; 
+    height: 91vh;
 }
 
 #header-video > video{
-    max-width: none;
+    width:100%;
+    height:100%;
+    object-fit: cover;
+    background:black;
 }
 /* Style Cards */
 figure > img{
@@ -634,9 +643,39 @@ footer{
     background-image: url(../media/images/rockywall.png);
     background-blend-mode: color-burn;
 }
-
 /* Mobile styles */
+/* Mobile navbar */
+.hamburger{
+    display: none;
+}
+
 @media only screen and (max-width: 640px) {
+    .hamburger{
+        display: block;
+        align-self: flex-end;
+    }
+
+    .hamburger-expanded{
+        order: -1;
+    }
+    .navlist-mobile{
+        height: 50vh !important;
+    }
+
+    #navlist{
+        flex-flow: row wrap;
+        align-items: flex-end;
+        align-content: flex-end;
+    }
+    #navlist > li:not(.hamburger) {
+        display: none;
+    }
+    .navli-expanded{
+        width: 100%;
+    }
+    #navlist > li {
+        height: 100%;
+    }
     .card{
         width: 100%;
         padding: 2%;
@@ -667,6 +706,10 @@ footer{
     #product-fig{
         width: 100%;
         padding: 0;
+    }
+    #navlist li:nth-child(1){
+        display: block;
+        margin-right: auto;
     }
 }
 /* 

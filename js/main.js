@@ -208,6 +208,10 @@ function openItemOverlay(card){
     
 }
 
+function nav(){
+    document.querySelector("#navlist").classList.add("navlist-mobile")
+    
+}   
 
 // Add Event listner when DOM is ready
 // Wait for DOM to load
@@ -231,5 +235,6 @@ document.addEventListener('DOMContentLoaded', () => {
         //Set the 'onClick' event to 'openItemOverlay'. Preventing href redirect and calling master function
         card.querySelector("figure > img").onclick = (e) =>{ e.preventDefault(); openItemOverlay(card) }
     })
+    document.querySelector("#navlist").onclick = nav
 });
 
