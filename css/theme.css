@@ -521,22 +521,12 @@ footer{
 
 /* Start Contact */
 
-@media only screen and (max-width:640px){
-    #contactwe {
-        width: 100vw;
-        display: flex;
-        flex-flow: row wrap;
-        padding: 7px;
-        justify-content: space-around;
-    }
-}
 
 #contactwe {
-    width: 100vw;
     display: flex;
-    flex-flow: row nowrap;
-    padding: 7px;
+    flex-flow: row wrap;
     justify-content: space-around;
+    width: 100%;
 }
 
 .contact-form-input {
@@ -545,7 +535,8 @@ footer{
     /* min-width: 37rem; */
     height: 3rem;
 }
-#contact-form{
+
+#contact-form {
     display: flex;
     flex-flow: wrap column;
     justify-content: center;
@@ -711,6 +702,41 @@ footer{
         display: block;
         margin-right: auto;
     }
+    /* Contact Us */
+    #contact-body {
+        max-width: 100vw;
+        display: flex;
+        flex-flow: row wrap;
+    }
+
+    #contactus {
+        width: 100vw;
+        border: none;
+        height: auto;
+    }
+
+    #left-column {
+        width: 100vw;
+    }
+
+    #thankyou>p {
+        width: 70vw;
+    }
+
+    #cinfo {
+        max-width: 100vw;
+    }
+
+    /* About Us */
+
+    #contactwe {
+
+    }
+
+    #ryan {
+        order: -1;
+    }
+
 }
 /* 
 @media only screen and (max-width: 1400px)  {
