@@ -100,7 +100,7 @@ function updateCartTotals() {
 }
 
 function updateCart() {
-    let cart = document.getElementById('cart');
+    let cart = document.getElementById('cart-list');
     let total = 0;
     // check if cart is empty
     if (shop.cart.length === 0) {
@@ -125,6 +125,17 @@ function updateCart() {
             </div>
             
         </div>
+        <li class="cartcard rocky-texture" >
+                <figure><img src="../media/images/coffee.jpg" alt="Espresso Image"></figure>
+                <section class="cart-content">
+                    <h2 class="cart-item">Espresso</h2>
+                    <p class="cart-item-price">$5.00</p>
+                    <button><img src="../media/icons/plus.svg" alt="plus symbol"></button>
+                    <p class="cart-item-quantity">quantity: 0</p>
+                    <button ><img src="../media/icons/minus.svg" alt="minus symbol"></button>
+
+                </section>
+            </li>
         `;
     }
     // add total to cart element

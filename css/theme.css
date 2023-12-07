@@ -163,7 +163,7 @@ header{
 
 #header-video > video{
     width:100%;
-    height:100%;
+    height:122%;
     object-fit: cover;
     background:black;
 }
