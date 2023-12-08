@@ -155,6 +155,12 @@ header{
     font-size: 8rem;
     margin: -2.5% 0;
 }
+
+#ppourslogo2 {
+    height: min-content;
+    font-size: 8rem;
+    margin: -2.5% 0;
+}
 /* Video */
 #header-video{
     overflow: hidden; /* Crop video */
@@ -224,6 +230,9 @@ footer{
     background-blend-mode: color-burn;
     width: 100vw;
     height: 10vw;
+    position: relative;
+    left: 0;
+    bottom: 0;
 }
 
 /* Start Menu */
@@ -632,6 +641,9 @@ footer{
 .cart-content{
 
 }
+.idontwantyouhere {
+    display: none;
+}
 
 /* Start General Tag */
 .rocky-texture{
@@ -741,6 +753,10 @@ footer{
         order: -1;
     }
 
+    /* Footer */
+    footer {
+        height: auto;
+    }
 }
 /* 
 @media only screen and (max-width: 1400px)  {

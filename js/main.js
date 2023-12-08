@@ -111,7 +111,7 @@ function updateCart() {
     for (let [index, item] of shop.cart.entries()) {
         total += item.price * item.qty;
         cart.innerHTML += `
-        <ul class="cart-list">
+        <!-- <ul class="cart-list"> -->
             <li class="cartcard rocky-texture">
                 <figure><img src="${item.imgSrc}" alt="${item.name}"></figure>
                 <section class="cart-content" id="${index}">
@@ -124,7 +124,7 @@ function updateCart() {
                     <button class="subBtn modQty"><img src="../media/icons/minus.svg" alt="minus symbol"></button>
                 </section>
             </li>
-        </ul>
+        <!-- </ul> -->
         `;
     }
     // add total to cart element
@@ -242,7 +242,7 @@ function nav(){
 document.addEventListener('DOMContentLoaded', () => {
     
     // check if cart element exists
-    if (document.getElementById('cart') !== null) {
+    if (document.getElementById('cart-list') !== null) {
         updateCart();
     }
     // check if cart has items and update totals
