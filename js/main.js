@@ -114,13 +114,14 @@ function updateCart() {
         <ul class="cart-list">
             <li class="cartcard rocky-texture">
                 <figure><img src="${item.imgSrc}" alt="${item.name}"></figure>
-                <section class="cart-content" >
+                <section class="cart-content" id="${index}">
                     <h2 class="cart-item">${item.name}</h2>
                     <p>${item.desc}</p>
                     <p class="cart-item-price">Price: $${item.price.toFixed(2)}</p>
-                    <p class="cart-item-quantity>Quantity: ${item.qty}</p>
+                    <p class="cart-item-quantity">Quantity: ${item.qty}</p>
                     <p>Subtotal: $${(item.price * item.qty).toFixed(2)}</p>
-                    <button><img src="../media/icons/minus.svg" alt="minus symbol"></button>
+                    <button class="addBtn modQty"><img src="../media/icons/plus.svg" alt="plus symbol"></button>
+                    <button class="subBtn modQty"><img src="../media/icons/minus.svg" alt="minus symbol"></button>
                 </section>
             </li>
         </ul>
@@ -135,6 +136,7 @@ function updateCart() {
     `;
     // add event listeners to buttons
     document.querySelectorAll('.removeBtn').forEach(button => button.addEventListener('click', removeItem));
+    document.querySelectorAll('.modQty').forEach(button => button.addEventListener('click', incrementItem));
     document.getElementById('emptyCart').addEventListener('click', emptyCart);
 }
 
@@ -143,6 +145,28 @@ function removeItem(e) {
     let index = e.target.id;
     // remove item from cart
     shop.cart.splice(index, 1);
+    // update local storage
+    localStorage.setItem(shopID, JSON.stringify(shop));
+    // reload page to update cart
+    location.reload();
+}
+
+function incrementItem(e) {
+    e.preventDefault();
+    let index = e.target.parentElement.parentElement.id;
+    let action = e.target.parentElement.classList;
+    console.log(index);
+    console.log(action);
+    if(action.contains("addBtn") ) {
+        shop.cart[index].qty++;
+    }
+    if (action.contains("subBtn")){
+        shop.cart[index].qty--;
+    }
+    // remove item from cart if reduced to 0 qty
+    if (shop.cart[index].qty == 0){
+        shop.cart.splice(index, 1);
+    }
     // update local storage
     localStorage.setItem(shopID, JSON.stringify(shop));
     // reload page to update cart
