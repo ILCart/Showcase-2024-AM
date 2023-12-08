@@ -111,31 +111,19 @@ function updateCart() {
     for (let [index, item] of shop.cart.entries()) {
         total += item.price * item.qty;
         cart.innerHTML += `
-        <div class="cartItem">
-            <img src="${item.imgSrc}" alt="${item.name}">
-            <div class="cartItemInfo" >
-                <h3>${item.name}</h3>
-                <p>${item.desc}</p>
-                <div class="cartItemPricing">
-                    <p>Price: $${item.price.toFixed(2)}</p>
-                    <p>Quantity: ${item.qty}</p>
+        <ul class="cart-list">
+            <li class="cartcard rocky-texture">
+                <figure><img src="${item.imgSrc}" alt="${item.name}"></figure>
+                <section class="cart-content" >
+                    <h2 class="cart-item">${item.name}</h2>
+                    <p>${item.desc}</p>
+                    <p class="cart-item-price">Price: $${item.price.toFixed(2)}</p>
+                    <p class="cart-item-quantity>Quantity: ${item.qty}</p>
                     <p>Subtotal: $${(item.price * item.qty).toFixed(2)}</p>
-                    <a id="${index}" href="#" class="removeBtn">Remove</a>
-                </div>
-            </div>
-            
-        </div>
-        <li class="cartcard rocky-texture" >
-                <figure><img src="../media/images/coffee.jpg" alt="Espresso Image"></figure>
-                <section class="cart-content">
-                    <h2 class="cart-item">Espresso</h2>
-                    <p class="cart-item-price">$5.00</p>
-                    <button><img src="../media/icons/plus.svg" alt="plus symbol"></button>
-                    <p class="cart-item-quantity">quantity: 0</p>
-                    <button ><img src="../media/icons/minus.svg" alt="minus symbol"></button>
-
+                    <button><img src="../media/icons/minus.svg" alt="minus symbol"></button>
                 </section>
             </li>
+        </ul>
         `;
     }
     // add total to cart element
