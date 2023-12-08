@@ -113,15 +113,15 @@ function updateCart() {
         cart.innerHTML += `
         <!-- <ul class="cart-list"> -->
             <li class="cartcard rocky-texture">
-                <figure><img src="${item.imgSrc}" alt="${item.name}"></figure>
+                <figure id="cart-fig"><img src="${item.imgSrc}" alt="${item.name}"></figure>
                 <section class="cart-content" id="${index}">
                     <h2 class="cart-item">${item.name}</h2>
                     <p>${item.desc}</p>
                     <p class="cart-item-price">Price: $${item.price.toFixed(2)}</p>
-                    <p class="cart-item-quantity">Quantity: ${item.qty}</p>
-                    <p>Subtotal: $${(item.price * item.qty).toFixed(2)}</p>
-                    <button class="addBtn modQty"><img src="../media/icons/plus.svg" alt="plus symbol"></button>
-                    <button class="subBtn modQty"><img src="../media/icons/minus.svg" alt="minus symbol"></button>
+                    <button class="addBtn modQty btnrow"><img src="../media/icons/plus.svg" alt="plus symbol"></button>
+                    <p class="cart-item-quantity btnrow">Quantity: ${item.qty}</p>
+                    <button class="subBtn modQty btnrow"><img src="../media/icons/minus.svg" alt="minus symbol"></button>
+                    <p class="cart-subtotal">Subtotal: $${(item.price * item.qty).toFixed(2)}</p>
                 </section>
             </li>
         <!-- </ul> -->
