@@ -713,6 +713,19 @@ footer {
     margin-left: auto;
     margin-right: auto;
 }
+/* Jurassic pay */
+#checkout-payment{
+    background-color: var(--background);
+}
+#jurassicPay{
+    display: flex;
+    flex-flow: column wrap;
+}
+#jurassicPay > input{
+    border: none;
+    background-color: var(--main-accent);
+    accent-color: var(--accent1);
+}
 
 /* Start Cart */
 
@@ -720,7 +733,9 @@ footer {
     display: flex;
     flex-flow: row wrap;
 }
-
+.cart-item{
+    width: 100%;
+}
 .cartcard {
     display: flex;
     flex-flow: row wrap;
@@ -734,10 +749,30 @@ footer {
 }
 
 .cart-content {
-    max-width: 75%;
+    width: 80%;
+    display: flex;
+    flex-flow: column wrap;
+    align-items: flex-start;
 
 }
+.cartTotal{
+    width: 100%;
+    height: 100%;
+}
 
+#emptyCart{
+    font-size: 1.5rem;
+    width: 25%;
+    height: 100%;
+    padding: .5%;
+    margin: .5% 0;
+}
+#checkoutCart{
+   width: 25%; 
+   font-size: 1.5rem;
+   padding: .5%;
+
+}
 .btnrow {
     display: flex;
     flex-flow: row nowrap;
@@ -760,7 +795,9 @@ footer {
 }
 
 .cart-subtotal {
-    margin-left: 90em;
+    display: flex;
+    /* width: 100%; */
+    align-self: flex-end;
 }
 .modQty{
     background-color: var(--background);
@@ -883,6 +920,21 @@ footer {
         height: auto;
     }
 
+    
+    .menu-card>figure>figcaption {
+        font-size: 2.2rem;
+    }
+}
+@media only screen and (max-width: 900px) and (min-width: 640px) {
+    .card {
+        width: 33.3%;
+        padding: 2%;
+    }
+    .menu-card>figure>figcaption {
+        font-size: 1.5rem;
+    }
+}
+@media only screen and (max-width: 900px) {
     /* cart */
     .cart-content {
         max-width: 100%;
@@ -907,20 +959,6 @@ footer {
         flex-flow: row wrap;
         padding: 1%;
     }
-    .menu-card>figure>figcaption {
-        font-size: 2.2rem;
-    }
-}
-@media only screen and (max-width: 900px) and (min-width: 640px) {
-    .card {
-        width: 33.3%;
-        padding: 2%;
-    }
-    .menu-card>figure>figcaption {
-        font-size: 1.5rem;
-    }
-}
-@media only screen and (max-width: 900px) {
     .hamburger {
         display: block;
         align-self: flex-end;
