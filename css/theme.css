@@ -578,7 +578,6 @@ footer {
 .timeline {
     display: flex;
     width: auto;
-    height: 0vh;
     justify-content: space-around;
 }
 
