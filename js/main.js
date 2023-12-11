@@ -208,6 +208,8 @@ function setOverlay({img,name,desc,price}){
     overlay.querySelector("#product-fig > #product-image").src = img
     overlay.querySelector("#product-name").innerText = name
     overlay.querySelector("#product-descriptor").innerText = desc
+    overlay.querySelector("#product-price").innerText = price
+
     //return the overlay for use in the master function
     return overlay
 }
@@ -231,9 +233,11 @@ function openItemOverlay(card){
     
 }
 
-function nav(){
-    document.querySelector("#navlist").classList.add("navlist-mobile")
-    
+function nav(e){
+    e.preventDefault()
+    !document.querySelector(".hamburger").classList.replace("unexpanded","expanded") ? document.querySelector(".hamburger").classList.replace("expanded","unexpanded") : console.log("what")
+    !document.querySelector("#navlist").classList.replace("navlist-closed","navlist-opened") ? document.querySelector("#navlist").classList.replace("navlist-opened","navlist-closed") : console.log("what")
+
 }   
 
 // Add Event listner when DOM is ready
@@ -258,6 +262,6 @@ document.addEventListener('DOMContentLoaded', () => {
         //Set the 'onClick' event to 'openItemOverlay'. Preventing href redirect and calling master function
         card.querySelector("figure > img").onclick = (e) =>{ e.preventDefault(); openItemOverlay(card) }
     })
-    document.querySelector("#navlist").onclick = nav
+    document.querySelector("#navlist > .hamburger").onclick = nav
 });
 
