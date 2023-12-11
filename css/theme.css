@@ -579,6 +579,7 @@ footer {
     display: flex;
     width: auto;
     justify-content: space-around;
+    height: 75vh;
 }
 
 .time-line {
@@ -861,6 +862,7 @@ footer {
     }
 
     .time-line-text {
+        height: none;
         min-width: 80vw;
         word-wrap: break-word;
     }
