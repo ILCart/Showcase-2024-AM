@@ -114,7 +114,6 @@ function updateCart() {
     for (let [index, item] of shop.cart.entries()) {
         total += item.price * item.qty;
         cart.innerHTML += `
-        <!-- <ul class="cart-list"> -->
             <li class="cartcard rocky-texture">
                 <figure id="cart-fig"><img src="${item.imgSrc}" alt="${item.name}"></figure>
                 <section class="cart-content" id="${index}">
@@ -127,14 +126,14 @@ function updateCart() {
                     <p class="cart-subtotal">Subtotal: $${(item.price * item.qty).toFixed(2)}</p>
                 </section>
             </li>
-        <!-- </ul> -->
         `;
     }
     // add total to cart element
     cart.innerHTML += `
     <div class="cartTotal">
         <h3>Total: $${total.toFixed(2)}</h3>
-        <a href="#" id="emptyCart">Empty Cart</a>
+        <a href="#" id="checkoutCart" class="btn">Checkout</a>
+        <a href="#" id="emptyCart" class="btn">Empty Cart</a>
     </div>
     `;
     // add event listeners to buttons
