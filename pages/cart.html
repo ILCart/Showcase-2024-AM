@@ -37,12 +37,13 @@
     </footer>
     <section id="overlay-container" class="overlay-visible">
         <section id="checkout-payment" class="rocky-texture">
-            <h1>Jurassic Pay</h1>
-            <form id="jurassicPay" action="">
+            <h1 class="decorative-font">Jurassic Pay</h1>
+            <form id="jurassicPay" action="./thanks.html">
                 <label for="pin">Enter pin:</label>
-                <input id="pin" min="0" max="9999" type="number">
+                <input id="pin" placeholder="Pin*" min="0" max="9999" type="number" required>
                 <label for="password">Enter password:</label>
-                <input id="password" type="password">
+                <input id="password" placeholder="Password*" type="password" required>
+                <input type="submit" id="submit-payment" value="Confirm Payment">
             </form>
 
         </section>

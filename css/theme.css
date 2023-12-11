@@ -36,7 +36,9 @@ h2 {
 h2 {
     font-size: 3rem;
 }
-
+h1{
+    font-size: 5rem;
+}
 a {
     color: #ffffff;
 }
@@ -66,6 +68,7 @@ a {
 }
 
 #home-cta:hover {
+    filter: brightness(120%);
     box-shadow: rgba(194, 155, 100, 0.4) 0px 5px,
     rgba(194, 155, 100, 0.3) 0px 10px,
     rgba(194, 155, 100, 0.2) 0px 15px,
@@ -237,8 +240,8 @@ figure>img {
 
 .card:hover {
     padding: 0%;
-    box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;    
     transition: all ease-in 200ms;
+    box-shadow: rgba(0, 0, 0, 0.9) 0px 22px 70px 4px;
     z-index: 2;
 }
 
@@ -578,8 +581,8 @@ footer {
 .timeline {
     display: flex;
     width: auto;
-    justify-content: center
-    height: 75vh;
+    justify-content: center;
+    height: 80vh;
     flex-flow: column nowrap;
     
 }
@@ -588,13 +591,12 @@ footer {
     display: flex;
     flex-flow: row wrap;
     align-content: center;
-    max-width: 59vw;
+    /* max-width: 59vw; */
 }
 
-.year {}
 
 .time-line-text {
-    font-size: 18px;
+    font-size: 1rem;
 }
 
 .container {
@@ -713,18 +715,39 @@ footer {
     margin-left: auto;
     margin-right: auto;
 }
+/* Checkout page thanks */
+#checkout-thank{
+    display: flex;
+    flex-flow: column nowrap;
+}
 /* Jurassic pay */
 #checkout-payment{
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: space-around;
     background-color: var(--background);
+    padding: 1%;
+}
+#submit-payment{
+    height: 5vw;
 }
 #jurassicPay{
     display: flex;
-    flex-flow: column wrap;
+    flex-flow: column nowrap;
 }
-#jurassicPay > input{
+
+#jurassicPay > input, #jurassicPay > button{
+    width: 100%;
+    font-family: 'Quicksand', sans-serif;
+    font-weight: bold;
     border: none;
     background-color: var(--main-accent);
     accent-color: var(--accent1);
+    margin: 2% 0;
+    height: 3rem;
+    font-size: 1.5rem;
+    caret-color: var(--accent1);
+
 }
 
 /* Start Cart */
@@ -892,15 +915,17 @@ footer {
 
     /* About Us */
 
-    .time-line-text {
-        font-size: 18px;
+    .time-line {
+        width: 100%;
     }
 
     #ryan {
         order: -1;
     }
 
-    .time-line-text {
+    .time-line-text { 
+        font-size: 18px;
+
         height: none;
         min-width: 80vw;
         word-wrap: break-word;
@@ -913,6 +938,7 @@ footer {
     .timeline {
         flex-flow: row wrap;
         padding: 0px;
+        height: unset;
     }
 
     /* Footer */
