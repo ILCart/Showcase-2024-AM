@@ -460,6 +460,8 @@ footer {
 }
 
 #isaacpic {
+    object-position: center;
+    object-fit: cover;
     border-radius: 50%;
     border-color: #5B9676;
     border-width: 5px;
@@ -494,6 +496,8 @@ footer {
 }
 
 #ryanpic {
+    object-position: center;
+    object-fit: cover;
     border-radius: 50%;
     border-color: #5B9676;
     border-width: 5px;
@@ -516,7 +520,6 @@ footer {
     padding: 7px;
 }
 
-#ryan-awards>h2 {}
 
 /* 
 #diagonal>line {
