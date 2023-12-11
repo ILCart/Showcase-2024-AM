@@ -315,9 +315,8 @@ footer {
 }
 
 .menu-card>figure>figcaption {
-    font-size: 2.2rem;
+    font-size: clamp(1rem, -0.104rem + 1.92vw, 2.2rem);
 }
-
 .menu-card-desc {
     display: none;
 }
@@ -459,10 +458,10 @@ footer {
 }
 #add-notification > p{
     color: white;
-    font-size: 4rem;
+    font-size: 3rem;
     padding: 5%;
     border-radius: 6px;
-    width: 50vw;
+    width: 90vw;
     height: 25vh;
     pointer-events: none;
     display: flex;
@@ -894,10 +893,20 @@ footer {
         flex-flow: row wrap;
         padding: 1%;
     }
-    
+    .menu-card>figure>figcaption {
+        font-size: 2.2rem;
+    }
 }
-
-@media only screen and (max-width: 900px) and (min-width: 300px) {
+@media only screen and (max-width: 900px) and (min-width: 640px) {
+    .card {
+        width: 33.3%;
+        padding: 2%;
+    }
+    .menu-card>figure>figcaption {
+        font-size: 1.5rem;
+    }
+}
+@media only screen and (max-width: 900px) {
     .hamburger {
         display: block;
         align-self: flex-end;

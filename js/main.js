@@ -40,7 +40,7 @@ function addToCart(e, card) {
     let product = card.querySelectorAll("*");
     let dialog = document.querySelector("#add-notification");
     dialog.classList.replace("overlay-invisible","overlay-visible")
-    setTimeout(()=>{dialog.classList.replace("overlay-visible","overlay-invisible")},500);
+    setTimeout(()=>{dialog.classList.replace("overlay-visible","overlay-invisible")},750);
     // create an array to hold product attributes
     let attributes = ['name', 'desc', 'price', 'imgSrc'];
     // loop through the product attributes and assign them to the array
