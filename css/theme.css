@@ -577,11 +577,8 @@ footer {
 
 .timeline {
     display: flex;
-    flex-flow: column wrap;
-    justify-content: center;
     width: auto;
-    justify-content: center;
-    height: 75vh;
+    height: 0vh;
     justify-content: space-around;
 }
 
