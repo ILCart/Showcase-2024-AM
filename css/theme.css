@@ -335,13 +335,14 @@ footer {
 /* Start overlay */
 .overlay-visible {
     opacity: 1;
-    /* display: flex; */
+    display: flex;
     transition: opacity 200ms ease-in;
 
 }
 
 .overlay-invisible {
     opacity: 0;
+    display: flex;
     pointer-events: none;
     transition: opacity 200ms ease-in;
 }
@@ -447,8 +448,29 @@ footer {
 .exit-overlay>img {
     width: 100%;
 }
-
-
+/* add to card dialog */
+#add-notification{
+    position: fixed;
+    z-index: 10;
+    width: 100vw;
+    height: 100vh;
+    align-items: center;
+    justify-content: center;
+}
+#add-notification > p{
+    color: white;
+    font-size: 4rem;
+    padding: 5%;
+    border-radius: 6px;
+    width: 50vw;
+    height: 25vh;
+    pointer-events: none;
+    display: flex;
+    flex-flow: wrap row;
+    align-content: center;
+    justify-content: center;
+    background-color: var(--background);
+}
 /* Start About Us */
 
 #isaac {

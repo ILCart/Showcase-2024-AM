@@ -38,6 +38,9 @@ function addToCart(e, card) {
     e.preventDefault();
     // get the product attributes from DOM
     let product = card.querySelectorAll("*");
+    let dialog = document.querySelector("#add-notification");
+    dialog.classList.replace("overlay-invisible","overlay-visible")
+    setTimeout(()=>{dialog.classList.replace("overlay-visible","overlay-invisible")},500);
     // create an array to hold product attributes
     let attributes = ['name', 'desc', 'price', 'imgSrc'];
     // loop through the product attributes and assign them to the array
