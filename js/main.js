@@ -39,8 +39,8 @@ function addToCart(e, card) {
     // get the product attributes from DOM
     let product = card.querySelectorAll("*");
     let dialog = document.querySelector("#add-notification");
-    dialog.classList.replace("overlay-invisible","overlay-visible")
-    setTimeout(()=>{dialog.classList.replace("overlay-visible","overlay-invisible")},750);
+    dialog.classList.replace("overlay-invisible", "overlay-visible")
+    setTimeout(() => { dialog.classList.replace("overlay-visible", "overlay-invisible") }, 750);
     // create an array to hold product attributes
     let attributes = ['name', 'desc', 'price', 'imgSrc'];
     // loop through the product attributes and assign them to the array
@@ -93,13 +93,16 @@ function cartTotal() {
 function updateCartTotals() {
     let total = cartTotal();
     // check if cartTotal element exists and update if applicable
-    if(document.getElementById(cartTotalID) !== null) {
+    if (document.getElementById(cartTotalID) !== null) {
         document.getElementById(cartTotalID).innerHTML = `${total[0].toFixed(2)}`;
     }
     // check if cartItemCount element exists and update if applicable
-    if(document.getElementById(cartItemCountID) !== null) {
+    if (document.getElementById(cartItemCountID) !== null) {
         document.getElementById(cartItemCountID).innerHTML = `${total[1]}`;
     }
+}
+function checkoutCart() {
+    document.getElementById("overlay-container").classList.replace("overlay-invisible", "overlay-visible")
 }
 
 function updateCart() {
@@ -140,6 +143,8 @@ function updateCart() {
     document.querySelectorAll('.removeBtn').forEach(button => button.addEventListener('click', removeItem));
     document.querySelectorAll('.modQty').forEach(button => button.addEventListener('click', incrementItem));
     document.getElementById('emptyCart').addEventListener('click', emptyCart);
+    document.getElementById('checkoutCart').addEventListener('click', checkoutCart);
+
 }
 
 function removeItem(e) {
@@ -159,14 +164,14 @@ function incrementItem(e) {
     let action = e.target.parentElement.classList;
     console.log(index);
     console.log(action);
-    if(action.contains("addBtn") ) {
+    if (action.contains("addBtn")) {
         shop.cart[index].qty++;
     }
-    if (action.contains("subBtn")){
+    if (action.contains("subBtn")) {
         shop.cart[index].qty--;
     }
     // remove item from cart if reduced to 0 qty
-    if (shop.cart[index].qty == 0){
+    if (shop.cart[index].qty == 0) {
         shop.cart.splice(index, 1);
     }
     // update local storage
@@ -187,24 +192,28 @@ function emptyCart() {
 //Road to never nester
 //Start Overlay Code
 //Closes an overlay
-function exitOverlay(overlay){
-    console.log(overlay,overlay.parentElement)
+function exitOverlay(overlay) {
+    console.log(overlay, overlay.parentElement)
     // Replace the visible class to make the overlay invisible
-    overlay.parentElement.classList.replace("overlay-visible","overlay-invisible")
+    overlay.parentElement.classList.replace("overlay-visible", "overlay-invisible")
+}
+function exitPayOverlay(e) {
+    e.preventDefault();
+    exitOverlay(document.getElementById("checkout-payment"));
 }
 
 //Scrapes the content for use in an overlay
-function scrapeItem(card){
+function scrapeItem(card) {
     //Query for all content needed
     let img = card.querySelector("figure > img").src,
-    name = card.querySelector("figure > figcaption").innerText,
-    desc = card.querySelector(".menu-card-desc").innerText,
-    price = card.querySelector(".menu-card-price").innerText
+        name = card.querySelector("figure > figcaption").innerText,
+        desc = card.querySelector(".menu-card-desc").innerText,
+        price = card.querySelector(".menu-card-price").innerText
     //return as tuple
-    return {img,name,desc,price}
+    return { img, name, desc, price }
 }
 //Sets the content for an overlay
-function setOverlay({img,name,desc,price}){
+function setOverlay({ img, name, desc, price }) {
     //Query for the overlay and set all the content
     let overlay = document.querySelector("#overlay-product")
     overlay.querySelector("#product-fig > #product-image").src = img
@@ -216,37 +225,39 @@ function setOverlay({img,name,desc,price}){
     return overlay
 }
 //Master function for opening an item overlay
-function openItemOverlay(card){
+function openItemOverlay(card) {
     console.log(card)
     // Scrape the card for content and set the overlay to that content
     let overlay = setOverlay(scrapeItem(card))
     // Replace the invisible class to make the overlay visible
-    overlay.parentElement.classList.replace("overlay-invisible","overlay-visible")
+    overlay.parentElement.classList.replace("overlay-invisible", "overlay-visible")
     //Set the 'onClick' event to 'exitOverlay'. Preventing href redirect and calling exit function
-    overlay.querySelector(".exit-overlay").onclick = (e) => {e.preventDefault(); exitOverlay(overlay)}
+    overlay.querySelector(".exit-overlay").onclick = (e) => { e.preventDefault(); exitOverlay(overlay) }
     // check if addToCart buttons exist
     if (document.querySelectorAll('.addToCart') === null) return;
     let cartButton = document.querySelector('.addToCart');
     // Adapt faux cart add to overlay system
     cartButton.onclick = e => {
-        addToCart(e,card)
+        addToCart(e, card)
     }
     //cartButton.forEach(button => button.addEventListener('click', addToCart))
-    
+
 }
 
-function nav(e){
+function nav(e) {
     e.preventDefault()
-    !document.querySelector(".hamburger").classList.replace("unexpanded","expanded") ? document.querySelector(".hamburger").classList.replace("expanded","unexpanded") : console.log("what")
-    !document.querySelector("#navlist").classList.replace("navlist-closed","navlist-opened") ? document.querySelector("#navlist").classList.replace("navlist-opened","navlist-closed") : console.log("what")
+    !document.querySelector(".hamburger").classList.replace("unexpanded", "expanded") ? document.querySelector(".hamburger").classList.replace("expanded", "unexpanded") : console.log("what")
+    !document.querySelector("#navlist").classList.replace("navlist-closed", "navlist-opened") ? document.querySelector("#navlist").classList.replace("navlist-opened", "navlist-closed") : console.log("what")
 
-}   
+}
 
 // Add Event listner when DOM is ready
 // Wait for DOM to load
 
 document.addEventListener('DOMContentLoaded', () => {
-    
+    if (document.querySelector(".exit-overlay") !== null) {
+        document.querySelector(".exit-overlay").addEventListener('click', exitPayOverlay);
+    }
     // check if cart element exists
     if (document.getElementById('cart-list') !== null) {
         updateCart();
@@ -260,9 +271,9 @@ document.addEventListener('DOMContentLoaded', () => {
     console.log("Ready", shop.cart);
 
     // Query for elements with a '.card' class
-    document.querySelectorAll(".card").forEach((card)=>{
+    document.querySelectorAll(".card").forEach((card) => {
         //Set the 'onClick' event to 'openItemOverlay'. Preventing href redirect and calling master function
-        card.querySelector("figure > img").onclick = (e) =>{ e.preventDefault(); openItemOverlay(card) }
+        card.querySelector("figure > img").onclick = (e) => { e.preventDefault(); openItemOverlay(card) }
     })
     document.querySelector("#navlist > .hamburger").onclick = nav
 });
