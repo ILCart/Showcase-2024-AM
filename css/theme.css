@@ -578,8 +578,10 @@ footer {
 .timeline {
     display: flex;
     width: auto;
-    justify-content: space-around;
+    justify-content: center
     height: 75vh;
+    flex-flow: column nowrap;
+    
 }
 
 .time-line {
