@@ -43,7 +43,7 @@
             <h1 class="decorative-font">Jurassic Pay</h1>
             <form id="jurassicPay" action="./thanks.html">
                 <label for="pin">Enter pin:</label>
-                <input id="pin" placeholder="Pin*" min="0" max="9999" type="number" required>
+                <input pattern="\d*" id="pin" placeholder="Pin*" min="0" max="9999" type="number" required>
                 <label for="password">Enter password:</label>
                 <input id="password" placeholder="Password*" type="password" required>
                 <input type="submit" id="submit-payment" value="Confirm Payment">
