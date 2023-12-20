@@ -158,7 +158,9 @@ nav {
     flex-wrap: wrap;
     justify-content: space-between;
 }
-
+.menu-card-name{
+    font-size: 2rem;
+}
 #specialties-header {
     padding: 0 1%;
 }
@@ -258,7 +260,7 @@ figure>img {
     flex-flow: row wrap;
     justify-content: center;
     text-align: center;
-    font-size: 3.5rem;
+    font-size: 2.5rem;
     font-family: 'Zen Old Mincho', serif;
 }
 
