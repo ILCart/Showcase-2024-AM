@@ -47,11 +47,11 @@ a {
 }
 
 .active {
-    text-decoration: underline 2px white;
+    text-decoration: underline 2px white !important;
     text-underline-offset: .3rem;
 }
 
-/* create a default button stlye */
+/* create a default button style */
 .btn {
     display: flex;
     flex-flow: row wrap;
@@ -102,41 +102,42 @@ nav {
     height: 9vh;
 }
 
-    #navlist>li {
-        transition: all ease-in 200ms;
-        height: 100%;
-        padding: 0 2% !important;
-    }
+#navlist>li {
+    transition: all ease-in 200ms;
+    height: 100%;
+    padding: 0 2% !important;
+}
 
-    #navlist>li:hover {
-        -webkit-backdrop-filter: brightness(60%);
+#navlist>li:hover {
+    -webkit-backdrop-filter: brightness(60%);
 
-        backdrop-filter: brightness(60%);
-        transition: all ease-in 200ms;
+    backdrop-filter: brightness(60%);
+    transition: all ease-in 200ms;
 
-    }
+}
 
-    #navlist a {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        font-size: 2rem;
-        text-align: center;
-        height: 100%;
-        width: 100%;
-        text-decoration: none;
-        font-weight: 100;
-    }
+#navlist a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
+    text-align: center;
+    height: 100%;
+    width: 100%;
+    text-decoration: none;
+    font-weight: 100;
+}
 
-    #navlist li:nth-child(1)>a>img {
-        height: 100%;
-        border-radius: 100%;
-        padding: 3% !important;
-    }
+#navlist li:nth-child(1)>a>img {
+    aspect-ratio: 1/1;
+    height: 100%;
+    border-radius: 100%;
+    padding: 3% !important;
+}
 
-    #navlist li:nth-child(1)>a>span {
-        width: 50%;
-    }
+#navlist li:nth-child(1)>a>span {
+    width: 50%;
+}
 
 
 #navlist li:nth-child(1) {
@@ -378,7 +379,9 @@ footer {
     width: 80%;
     padding: 2%;
 }
-
+#overlay-product > a.exit-overlay > img {
+    aspect-ratio: 1/1 !important;
+}
 #product-price {
     font-size: 2rem;
     padding: 1%;
@@ -871,7 +874,9 @@ footer {
 .hamburger {
     display: none;
 }
-
+.hamburger img{
+    aspect-ratio: 1/1 !important;
+}
 @media only screen and (max-width: 640px) {
 
     .card {
