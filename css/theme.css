@@ -130,7 +130,7 @@ nav {
     #navlist li:nth-child(1)>a>img {
         height: 100%;
         border-radius: 100%;
-        padding: 3%;
+        padding: 3% !important;
     }
 
     #navlist li:nth-child(1)>a>span {
