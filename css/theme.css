@@ -90,7 +90,7 @@ nav {
 }
 
 #navlist {
-    background-image: url(../media/images/rockywall.png);
+    background-image: url(../media/images/rockywall.webp);
     background-blend-mode: color-burn;
     background-color: var(--main-accent);
     list-style: none;
@@ -279,7 +279,7 @@ figure>img {
 /* Start Footer */
 footer {
     background-color: var(--accent1);
-    background-image: url(../media/images/upfeathers.png), url(../media/images/rockywall.png);
+    background-image: url(../media/images/upfeathers.webp), url(../media/images/rockywall.webp);
     background-blend-mode: color-burn;
     width: 100vw;
     bottom: 0;
@@ -860,7 +860,7 @@ footer {
 
 /* Start General Tag */
 .rocky-texture {
-    background-image: url(../media/images/rockywall.png);
+    background-image: url(../media/images/rockywall.webp);
     background-blend-mode: color-burn;
 }
 
