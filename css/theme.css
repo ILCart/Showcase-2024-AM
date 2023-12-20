@@ -883,7 +883,9 @@ footer {
         padding: 2%;
     }
 
-
+    header{
+        align-items: flex-end;
+    }
 
     #header-video>video {
         height: 90vh;
@@ -892,7 +894,7 @@ footer {
     }
 
     #header-banner {
-        bottom: 0;
+        /* bottom: 0; */
         height: 50vh;
         width: 100vw;
     }
