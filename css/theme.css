@@ -102,7 +102,6 @@ nav {
     height: 9vh;
 }
 
-@layer base {
     #navlist>li {
         transition: all ease-in 200ms;
         height: 100%;
@@ -110,6 +109,8 @@ nav {
     }
 
     #navlist>li:hover {
+        -webkit-backdrop-filter: brightness(60%);
+
         backdrop-filter: brightness(60%);
         transition: all ease-in 200ms;
 
@@ -136,7 +137,7 @@ nav {
     #navlist li:nth-child(1)>a>span {
         width: 50%;
     }
-}
+
 
 #navlist li:nth-child(1) {
     padding: 0;
@@ -187,6 +188,7 @@ header {
     display: flex;
     flex-wrap: nowrap;
     flex-direction: column;
+    -webkit-backdrop-filter: blur(50px);
     backdrop-filter: blur(50px);
     background-color: rgba(0, 0, 0, 0.25);
 }
