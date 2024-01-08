@@ -21,6 +21,7 @@ body {
     height: 100%;
     background-image: url(../media/images/geometric-leaves.webp);
     background-repeat: repeat;
+    background-size: 300px;
     background-blend-mode: color-burn;
     font-family: 'Quicksand', sans-serif;
     display: flex;
@@ -46,11 +47,11 @@ a {
 }
 
 .active {
-    text-decoration: underline 2px white;
+    text-decoration: underline 2px white !important;
     text-underline-offset: .3rem;
 }
 
-/* create a default button stlye */
+/* create a default button style */
 .btn {
     display: flex;
     flex-flow: row wrap;
@@ -86,10 +87,11 @@ nav {
     z-index: 5;
     width: 100%;
     order: -2;
+    height: 6rem;
 }
 
 #navlist {
-    background-image: url(../media/images/rockywall.png);
+    background-image: url(../media/images/rockywall.webp);
     background-blend-mode: color-burn;
     background-color: var(--main-accent);
     list-style: none;
@@ -98,44 +100,46 @@ nav {
     align-items: center;
     align-content: center;
     width: 100%;
-    height: 9vh;
+    height: 100%;
 }
 
-@layer base {
-    #navlist>li {
-        transition: all ease-in 200ms;
-        height: 100%;
-        padding: 0 2% !important;
-    }
-
-    #navlist>li:hover {
-        backdrop-filter: brightness(60%);
-        transition: all ease-in 200ms;
-
-    }
-
-    #navlist a {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        font-size: 2rem;
-        text-align: center;
-        height: 100%;
-        width: 100%;
-        text-decoration: none;
-        font-weight: 100;
-    }
-
-    #navlist li:nth-child(1)>a>img {
-        height: 100%;
-        border-radius: 100%;
-        padding: 3%;
-    }
-
-    #navlist li:nth-child(1)>a>span {
-        width: 50%;
-    }
+#navlist>li {
+    transition: all ease-in 200ms;
+    height: 100%;
+    padding: 0 2% !important;
 }
+
+#navlist>li:hover {
+    -webkit-backdrop-filter: brightness(60%);
+
+    backdrop-filter: brightness(60%);
+    transition: all ease-in 200ms;
+
+}
+
+#navlist a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
+    text-align: center;
+    height: 100%;
+    width: 100%;
+    text-decoration: none;
+    font-weight: 100;
+}
+
+#navlist li:nth-child(1)>a>img {
+    aspect-ratio: 1/1;
+    height: 100%;
+    border-radius: 100%;
+    padding: 1.2% !important;
+}
+
+#navlist li:nth-child(1)>a>span {
+    width: 50%;
+}
+
 
 #navlist li:nth-child(1) {
     padding: 0;
@@ -154,7 +158,9 @@ nav {
     flex-wrap: wrap;
     justify-content: space-between;
 }
-
+.menu-card-name{
+    font-size: 2rem;
+}
 #specialties-header {
     padding: 0 1%;
 }
@@ -186,6 +192,7 @@ header {
     display: flex;
     flex-wrap: nowrap;
     flex-direction: column;
+    -webkit-backdrop-filter: blur(50px);
     backdrop-filter: blur(50px);
     background-color: rgba(0, 0, 0, 0.25);
 }
@@ -207,16 +214,15 @@ header {
 
 /* Video */
 #header-video {
-    overflow: hidden;
-    /* Crop video */
-    height: 91vh;
+    height: 100%;
+    width: 100%;
 }
 
 #header-video>video {
-    height: auto;
-    max-width: unset;
+    height: 100%;
+    width: 100%;
     object-fit: cover;
-    background: black;
+
 }
 
 /* Style Cards */
@@ -254,7 +260,7 @@ figure>img {
     flex-flow: row wrap;
     justify-content: center;
     text-align: center;
-    font-size: 3.5rem;
+    font-size: 2.5rem;
     font-family: 'Zen Old Mincho', serif;
 }
 
@@ -278,7 +284,7 @@ figure>img {
 /* Start Footer */
 footer {
     background-color: var(--accent1);
-    background-image: url(../media/images/upfeathers.png), url(../media/images/rockywall.png);
+    background-image: url(../media/images/upfeathers.webp), url(../media/images/rockywall.webp);
     background-blend-mode: color-burn;
     width: 100vw;
     bottom: 0;
@@ -374,8 +380,11 @@ footer {
     background-color: var(--main-accent);
     width: 80%;
     padding: 2%;
+    max-height: 80%;
 }
-
+#overlay-product > a.exit-overlay > img {
+    aspect-ratio: 1/1 !important;
+}
 #product-price {
     font-size: 2rem;
     padding: 1%;
@@ -426,7 +435,7 @@ footer {
 
 #product-name {
     align-self: flex-start;
-    font-size: 3.5rem;
+    font-size: 2.5rem;
     width: 70%;
 }
 
@@ -770,6 +779,9 @@ footer {
 }
 
 /* Start Cart */
+#cart-container{
+    width: 100%;
+}
 
 #cart-list {
     display: flex;
@@ -781,6 +793,7 @@ footer {
 }
 
 .cartcard {
+    width: 100%;
     display: flex;
     flex-flow: row wrap;
     align-items: flex-start;
@@ -859,7 +872,7 @@ footer {
 
 /* Start General Tag */
 .rocky-texture {
-    background-image: url(../media/images/rockywall.png);
+    background-image: url(../media/images/rockywall.webp);
     background-blend-mode: color-burn;
 }
 
@@ -868,7 +881,9 @@ footer {
 .hamburger {
     display: none;
 }
-
+.hamburger > a > img{
+    aspect-ratio: 1/1 !important;
+}
 @media only screen and (max-width: 640px) {
 
     .card {
@@ -876,7 +891,9 @@ footer {
         padding: 2%;
     }
 
-
+    header{
+        align-items: flex-end;
+    }
 
     #header-video>video {
         height: 90vh;
@@ -885,7 +902,7 @@ footer {
     }
 
     #header-banner {
-        bottom: 0;
+        /* bottom: 0; */
         height: 50vh;
         width: 100vw;
     }
@@ -915,6 +932,9 @@ footer {
         margin-right: auto;
     } */
     /* Contact Us */
+    #facebook > img,#insta > img{
+        aspect-ratio: 1/1;
+    }
     #contact-body {
         max-width: 100vw;
         display: flex;

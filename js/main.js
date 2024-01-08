@@ -193,6 +193,7 @@ function emptyCart() {
 //Start Overlay Code
 //Closes an overlay
 function exitOverlay(overlay) {
+    if(overlay === null) return
     console.log(overlay, overlay.parentElement)
     // Replace the visible class to make the overlay invisible
     overlay.parentElement.classList.replace("overlay-visible", "overlay-invisible")

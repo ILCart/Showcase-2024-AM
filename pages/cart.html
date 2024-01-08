@@ -12,7 +12,7 @@
 <body>
     <nav>
         <ul id="navlist" class="navlist-closed">
-            <li><a href="../index.html"><img src="../media/images/prehistoric-pours-logo.jpg"
+            <li><a href="../index.html"><img src="../media/images/prehistoric-pours-logo.webp"
                         alt="prehistoric pours logo"><span id="logotext">Prehistoric Pours</span></a></li>
             <li><a href="../index.html">Home</a></li>
             <li><a href="menu.html">Menu</a></li>
@@ -25,7 +25,7 @@
 
         </ul>
     </nav>
-    <main>
+    <main id="cart-container">
         <ul id="cart-list">
 
         </ul>
@@ -39,11 +39,11 @@
     </footer>
     <section id="overlay-container" class="overlay-invisible">
         <section id="checkout-payment" class="rocky-texture">
-            <a class="exit-overlay btn" href=""> <img src="../media/icons/exit.svg" alt=""> </a>
+            <a class="exit-overlay btn" href="" title="exit"> <img src="../media/icons/exit.svg" alt=""> </a>
             <h1 class="decorative-font">Jurassic Pay</h1>
             <form id="jurassicPay" action="./thanks.html">
                 <label for="pin">Enter pin:</label>
-                <input id="pin" placeholder="Pin*" min="0" max="9999" type="number" required>
+                <input pattern="\d*" id="pin" placeholder="Pin*" min="0" max="9999" type="number" required>
                 <label for="password">Enter password:</label>
                 <input id="password" placeholder="Password*" type="password" required>
                 <input type="submit" id="submit-payment" value="Confirm Payment">
