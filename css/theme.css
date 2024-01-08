@@ -434,7 +434,7 @@ footer {
 
 #product-name {
     align-self: flex-start;
-    font-size: 3.5rem;
+    font-size: 2.5rem;
     width: 70%;
 }
 
@@ -778,6 +778,9 @@ footer {
 }
 
 /* Start Cart */
+#cart-container{
+    width: 100%;
+}
 
 #cart-list {
     display: flex;
@@ -789,6 +792,7 @@ footer {
 }
 
 .cartcard {
+    width: 100%;
     display: flex;
     flex-flow: row wrap;
     align-items: flex-start;
