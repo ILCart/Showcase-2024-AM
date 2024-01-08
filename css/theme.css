@@ -178,13 +178,13 @@ header {
     flex-wrap: wrap;
     justify-content: right;
     align-items: center;
-    height: 91vh;
+    height: 92vh;
     width: 100vw;
 }
 
 /* Banner overlay */
 #header-banner {
-    height: 91vh;
+    height: 92vh;
     align-items: center;
     justify-content: center;
     position: absolute;
