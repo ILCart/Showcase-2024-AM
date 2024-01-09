@@ -3,7 +3,7 @@
 :root {
     --background: #1F3222;
     --main-accent: #C29B64;
-    --accent1: #EEB01F;
+    --accent1: #daa11d;
     font-size: 14px;
 }
 
@@ -22,7 +22,6 @@ body {
     background-image: url(../media/images/geometric-leaves.webp);
     background-repeat: repeat;
     background-size: 300px;
-    background-blend-mode: color-burn;
     font-family: 'Quicksand', sans-serif;
     display: flex;
     flex-flow: row wrap;
@@ -92,7 +91,6 @@ nav {
 
 #navlist {
     background-image: url(../media/images/rockywall.webp);
-    background-blend-mode: color-burn;
     background-color: var(--main-accent);
     list-style: none;
     display: flex;
@@ -284,8 +282,6 @@ figure>img {
 /* Start Footer */
 footer {
     background-color: var(--accent1);
-    background-image: url(../media/images/upfeathers.webp), url(../media/images/rockywall.webp);
-    background-blend-mode: color-burn;
     width: 100vw;
     bottom: 0;
     height: auto;
@@ -435,8 +431,8 @@ footer {
 
 #product-name {
     align-self: flex-start;
-    font-size: 2.5rem;
-    width: 70%;
+    font-size: 4.5rem;
+    width: 100%;
 }
 
 #product-descriptor {
@@ -878,7 +874,6 @@ footer {
 /* Start General Tag */
 .rocky-texture {
     background-image: url(../media/images/rockywall.webp);
-    background-blend-mode: color-burn;
 }
 
 /* Mobile styles */
@@ -900,6 +895,11 @@ footer {
     }
     .cartTotal{
         height: unset;
+    #product-descriptor{
+        font-size: 1.25rem;
+    }
+    #product-name{
+        font-size: 2.5rem;
     }
     .card {
         width: 100%;
@@ -923,9 +923,13 @@ footer {
     }
 
 
-
+    #overlay-product > *:not(a){
+        padding: 0 10%;
+    }
     #overlay-product {
+        padding-bottom: 10%;
         flex-wrap: wrap;
+        width: 100%;
     }
 
     .exit-overlay {
@@ -1101,5 +1105,40 @@ footer {
         transition: none;
 
     }
+@media only screen and (max-width: 1028px) {
 
+    #cinfo {
+        border-style: solid;
+        border-color: #9E1D21;
+        border-width: 3px;
+        font-size: 38px;
+        width: 90%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    #contact-body {
+        max-width: 100vw;
+        display: flex;
+        flex-flow: row wrap;
+    }
+
+    #contactus {
+        width: 100vw;
+        border: none;
+        height: auto;
+    }
+
+    #left-column {
+        width: 100vw;
+    }
+
+    #thankyou>p {
+        width: 70vw;
+    }
+
+    #cinfo {
+        max-width: 100vw;
+    }
+}
 }
