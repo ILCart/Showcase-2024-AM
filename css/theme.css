@@ -431,15 +431,15 @@ footer {
 
 #product-name {
     align-self: flex-start;
-    font-size: 2.5rem;
-    width: 70%;
+    font-size: 4.5rem;
+    width: 100%;
 }
 
 #product-descriptor {
     padding: 2% 0;
-    font-size: 1.5rem;
+    font-size: 2rem;
     text-wrap: wrap;
-    width: 75%;
+    width: 100%;
 }
 
 /* Exit Overlay Button */
@@ -880,7 +880,12 @@ footer {
     aspect-ratio: 1/1 !important;
 }
 @media only screen and (max-width: 640px) {
-
+    #product-descriptor{
+        font-size: 1.25rem;
+    }
+    #product-name{
+        font-size: 2.5rem;
+    }
     .card {
         width: 100%;
         padding: 2%;
