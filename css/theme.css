@@ -3,7 +3,7 @@
 :root {
     --background: #1F3222;
     --main-accent: #C29B64;
-    --accent1: #EEB01F;
+    --accent1: #daa11d;
     font-size: 14px;
 }
 
@@ -22,7 +22,6 @@ body {
     background-image: url(../media/images/geometric-leaves.webp);
     background-repeat: repeat;
     background-size: 300px;
-    background-blend-mode: color-burn;
     font-family: 'Quicksand', sans-serif;
     display: flex;
     flex-flow: row wrap;
@@ -92,7 +91,6 @@ nav {
 
 #navlist {
     background-image: url(../media/images/rockywall.webp);
-    background-blend-mode: color-burn;
     background-color: var(--main-accent);
     list-style: none;
     display: flex;
@@ -284,8 +282,6 @@ figure>img {
 /* Start Footer */
 footer {
     background-color: var(--accent1);
-    background-image: url(../media/images/upfeathers.webp), url(../media/images/rockywall.webp);
-    background-blend-mode: color-burn;
     width: 100vw;
     bottom: 0;
     height: auto;
@@ -873,7 +869,6 @@ footer {
 /* Start General Tag */
 .rocky-texture {
     background-image: url(../media/images/rockywall.webp);
-    background-blend-mode: color-burn;
 }
 
 /* Mobile styles */
