@@ -895,6 +895,7 @@ footer {
     }
     .cartTotal{
         height: unset;
+    }
     #product-descriptor{
         font-size: 1.25rem;
     }
@@ -1105,8 +1106,8 @@ footer {
         transition: none;
 
     }
-@media only screen and (max-width: 1028px) {
-
+}
+@media only screen and (max-width: 1028px) and (min-width: 650px) {
     #cinfo {
         border-style: solid;
         border-color: #9E1D21;
@@ -1140,5 +1141,7 @@ footer {
     #cinfo {
         max-width: 100vw;
     }
+
 }
-}
+
+    
