@@ -1090,5 +1090,43 @@ footer {
         transition: none;
 
     }
+@media only screen and (max-width: 1028px) {
+    #social {
 
+    }
+
+    #cinfo {
+        border-style: solid;
+        border-color: #9E1D21;
+        border-width: 3px;
+        font-size: 38px;
+        width: 90%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    #contact-body {
+        max-width: 100vw;
+        display: flex;
+        flex-flow: row wrap;
+    }
+
+    #contactus {
+        width: 100vw;
+        border: none;
+        height: auto;
+    }
+
+    #left-column {
+        width: 100vw;
+    }
+
+    #thankyou>p {
+        width: 70vw;
+    }
+
+    #cinfo {
+        max-width: 100vw;
+    }
+}
 }
