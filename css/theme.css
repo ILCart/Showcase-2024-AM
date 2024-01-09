@@ -908,9 +908,13 @@ footer {
     }
 
 
-
+    #overlay-product > *:not(a){
+        padding: 0 10%;
+    }
     #overlay-product {
+        padding-bottom: 10%;
         flex-wrap: wrap;
+        width: 100%;
     }
 
     .exit-overlay {
