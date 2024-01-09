@@ -442,7 +442,7 @@ footer {
 #product-descriptor {
     padding: 2% 0;
     font-size: 1.5rem;
-    text-wrap: wrap;
+    /* text-wrap: wrap; */
     width: 75%;
 }
 
